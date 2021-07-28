@@ -6,7 +6,7 @@ with amount as (
         status,
         amount / 100 as amount,
         created as created_at
-    from raw.STRIPE.payment
+    from {{ source('stripe', 'payment') }}
 ),
 
 final as (
