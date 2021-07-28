@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: 'jaffle_shop_src'   #source name throughout dbt
+    description: 'A source for js'
+    database: raw
+    schema: jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
